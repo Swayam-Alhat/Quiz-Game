@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Application</title>
+    <link rel="stylesheet" href="src/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="h-screen w-screen bg-[#010101] flex justify-center items-center">
+    <!-- Add this somewhere in your HTML for Tailwind to pick them up -->
+    <div class="hidden bg-blue-500 text-white"></div>
+
+    <main>
+      <!-- main container starts -->
+      <div
+        id="main-container"
+        class="w-[500px] h-auto bg-slate-700 text-center px-3 py-3 rounded-lg"
+      >
+        <!-- heading -->
+        <h1 class="text-white text-3xl font-bold mb-5">Quiz App</h1>
+        <!-- start button -->
+        <button
+          id="start-button"
+          class="bg-neutral-800 mb-2 hover:bg-neutral-950 text-xl text-white py-2 px-3 font-bold rounded-md"
+        >
+          Start Quiz
+        </button>
+        <!-- the question answer div starts.. -->
+        <div id="QA-container" class="w-full mb-3 hidden">
+          <p id="question-para" class="text-white font-bold text-2xl mb-3">
+            What is the capital of India?
+          </p>
+          <div id="option-list">
+            <button
+              id="option1"
+              class="bg-zinc-800 mb-2 rounded-md hover:bg-zinc-900 text-white text-xl font-bold w-full py-2"
+            >
+              New Delhi
+            </button>
+            <button
+              id="option2"
+              class="bg-zinc-800 mb-2 rounded-md hover:bg-zinc-900 text-white text-xl font-bold w-full py-2"
+            >
+              Mumbai
+            </button>
+            <button
+              id="option3"
+              class="bg-zinc-800 mb-2 rounded-md hover:bg-zinc-900 text-white text-xl font-bold w-full py-2"
+            >
+              Chennai
+            </button>
+            <button
+              id="option4"
+              class="mb-2 bg-zinc-800 rounded-md hover:bg-zinc-900 text-white text-xl font-bold w-full py-2"
+            >
+              Tamil Nadu
+            </button>
+          </div>
+          <!-- the next question button -->
+          <button
+            id="next-button"
+            class="bg-neutral-800 hidden mb-2 hover:bg-neutral-950 text-white text-2xl font-extrabold h-10 w-10 rounded-md"
+          >
+            <i class="fa-regular fa-circle-right"></i>
+          </button>
+        </div>
+        <!--  -->
+        <p id="score-para" class="text-white font-bold text-2xl mb-3 hidden">
+          Score: 3 out of 3
+        </p>
+        <button
+          aria-label="restart-game"
+          id="restart-button"
+          class="bg-neutral-800 mb-2 hidden hover:bg-neutral-950 text-white text-2xl font-extrabold h-10 w-10 rounded-md"
+        >
+          <i class="fa-solid fa-rotate-left fa-rotate-90"></i>
+        </button>
+      </div>
+    </main>
+    <script src="first.js"></script>
+  </body>
+</html>
